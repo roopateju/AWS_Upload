@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #202C3A;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+.navbar .side {
+  display: flex;
+  align-items: center;
+}
+
+#language-select {
+  margin-right: 10px;
+  background-color: white;
+  color: gray;
+  font-size: 14px;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  border-radius: 2px;
+  outline: none;
+}
+
+
+
+.navbar .side div {
+  font-size: 14px;
+  font-weight: bold;
+  background-color: orange;
+  color: black;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 2px;
+}
+
+.home {
+  max-height: 100%;
+  width: 100%;
+  padding: 1.5rem 3.5rem;
+}
+
+.notification {
+  background-color: rgb(233, 246, 253);
+  color: #333;
+  padding: 20px;
+  border: rgb(0, 99, 149) 1px solid;
+  width: 55%;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.upload-info{
+  background-color: white;
+  width: 55%;
+  box-shadow: #b4b4b4 0px 1px 2px 1px;
+  padding: 1rem 1.5rem;
+
+}
+
+.upload-info .aws-title {
+  font-size: 30px;
+  font-weight: 500;
+  color: #2c2c2c;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.upload-info .aws-build {
+  font-size: 15px;
+  color: #000000;
+  margin-bottom: 15px;
+  line-height: 2px;
+}
+
+.upload-info ul {
+  font-size: 15px;
+  list-style-type: disc;
+  padding-left: 40px;
+  color: #000000;
+}
+ul li{
+  padding-bottom: 10px;
+}
+.upload-info ul ul {
+  list-style-type: circle;
+  padding-left: 40px;
+}
+
+
+@media (max-width: 900px) {
+  .home{
+      padding: 1.5rem;
+  }
+  .upload-info, .notification{
+      width: 100%;
+  }
+
+}
+
+.Document_Upload{
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: #b4b4b4 0px 1px 2px 1px;
+  padding: 1rem 1.5rem;
+}
+
+.Document_Upload h3{
+  color: grey;
+  font-size: 13px;
+}
+
+
+
+.footer{
+  font-size: 14px;
+  padding: 1.5rem 0;
+  background-color: #202C3A;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer div{
+  display: flex;
+  flex-direction: row;
+}
+
+.footer div a{
+  background-color: #202C3A;
+  padding: 10px;
+  margin-right: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}

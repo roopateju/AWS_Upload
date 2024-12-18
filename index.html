@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/Icon.png" type="image/png">
+    <title>AWS Document Upload</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="navbar">
+            <div class="logo">
+                <img src="img/AWS.jpg" alt="logo">
+            </div>
+            <div class="side">
+                <select name="language" id="language-select">
+                    <option value="English">English</option>
+                    <option value="Others">Others</option>
+                </select>
+                <div>Console Log in</div>
+            </div>
+        </header>
+
+
+        <main class="home">
+            <p class="notification">Our team can take up to 24 hours to review the information.</p>
+            <section class="upload-info">
+                <h1 class="aws-title">AWS Document Upload</h1><br>
+                <div class="aws-build">Documents uploaded must meet the criteria below:</div><br>
+                <ul>
+                    <li>You should redact all biometric data, such as date of birth, ID card number, eye color, race,
+                        weight, etc. from your document before uploading.</li>
+                    <li>Must be legible.</li>
+                    <li>Can't be password-protected (remove the password before uploading).</li>
+                    <li>Can't be a screenshot of the original document.</li>
+                    <li>Must be recent document (up to 2 months old).</li>
+                    <li>Must clearly show the account holder's name and credit card holder's name.</li>
+                    <li>All outstanding invoices on the account must be paid.</li>
+                    <li>For bank/credit card documents, all of the following details must be clearly visible:</li>
+                    <ul>
+                        <li>The last 2-4 digits on the card.</li>
+                        <li>The name on the credit account.</li>
+                        <li>The address of the account holder.</li>
+                        <li>The bank name.</li>
+                    </ul>
+                </ul><br>
+
+                <div>Legitimate documents may include:</div><br>
+                <ul>
+                    <li>Valid proof of address.</li><br>
+                    <li>Valid proof of bank statement.</li><br>
+                    <li>Government-issued identification.</li><br>
+                    <li>Additional Information.</li><br>
+                </ul>
+
+                <div>Before submitting documentation, review the requested information in the email to ensure a match in documentation.</div><br>
+            
+
+        <div class="Document_Upload">
+            <h2>Document Upload</h2><br>
+        </div>
+            <div class="Document_Upload">To upload a document, choose Select File. Select up to 5 files to upload. Then choose Upload.<br><br>
+            <h3>Note: Submitted documents can't be removed later.</h3><br>
+            <form id="upload-form">
+                <input type="file" value="Select File" accept=".PNG, .JPG , .PDF" /><br><br>
+                <h3>PNG, JPG, and PDF file types are accepted. Each PDF can have a maximum of 25 pages. The maximum file size is 4 MB.</h3><br>
+                <button type="submit" id="upload-button">Upload</button><br>
+                <div id="upload-status"></div>
+            </form>
+            </div>
+        </div>
+        </section>
+</main>
+    </div>
+
+    <footer class="footer">
+        <p>© 2023, Amazon Web Services, Inc. or its affiliates. All rights reserved.</p>
+        <div>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of use</a>
+        </div>
+    </footer>
+</body>
+
+</html>
