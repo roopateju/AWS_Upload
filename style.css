@@ -14,7 +14,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .navbar {
@@ -39,26 +39,32 @@ body {
 #language-select {
   margin-right: 10px;
   background-color: white;
-  color: gray;
+  color: #545B64;
   font-size: 14px;
   padding: 0.4rem 1rem 0.4rem 1rem;
   border-radius: 2px;
   outline: none;
 }
 
+#language-select:hover {
+  color: black;
+}
 
-
-.navbar .side div {
+.console-login-link {
   font-size: 14px;
   font-weight: bold;
-  background-color: orange;
   color: black;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  text-decoration: none;
+  background-color: #FF9900;
+  padding: 0.5rem 1rem;
   border-radius: 2px;
 }
 
+.console-login-link:hover {
+  background-color: #ff7d03;
+}
+
 .home {
-  max-height: 100%;
   width: 100%;
   padding: 1.5rem 3.5rem;
 }
@@ -73,7 +79,7 @@ body {
   font-size: 14px;
 }
 
-.upload-info{
+.upload-info {
   background-color: white;
   width: 55%;
   box-shadow: #b4b4b4 0px 1px 2px 1px;
@@ -91,9 +97,10 @@ body {
 
 .upload-info .aws-build {
   font-size: 15px;
+  padding-top: 15px;
   color: #000000;
   margin-bottom: 15px;
-  line-height: 2px;
+  /* line-height: 2px; */
 }
 
 .upload-info ul {
@@ -102,41 +109,127 @@ body {
   padding-left: 40px;
   color: #000000;
 }
-ul li{
-  padding-bottom: 10px;
-}
+
 .upload-info ul ul {
   list-style-type: circle;
   padding-left: 40px;
 }
 
+.valid-proof {
+  color: #545B64;
+  font-size: 15px;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.triangle {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.triangle.open {
+  transform: rotate(90deg);
+}
+
+.dropdown-content {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.dropdown-content img {
+  max-width: 100%;
+}
+
+.additional-info {
+  border-top: 1px solid #babcbf;
+}
+
+.additional-info {
+  list-style-type: disc;
+  margin-left: 5px;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.additional-info ul li {
+  padding-bottom: 5px;
+}
+
+.valid-proof.open .dropdown-content {
+  display: block;
+}
 
 @media (max-width: 900px) {
-  .home{
-      padding: 1.5rem;
+  .home {
+    padding: 1.5rem;
   }
-  .upload-info, .notification{
-      width: 100%;
+
+  .upload-info,
+  .notification {
+    width: 100%;
   }
 
 }
 
-.Document_Upload{
+.Document_Upload {
   height: 100%;
   width: 100%;
   background-color: #ffffff;
-  box-shadow: #b4b4b4 0px 1px 2px 1px;
-  padding: 1rem 1.5rem;
+  box-shadow: grey 0px 1px 2px 1px;
+  /* padding: 1rem 1.5rem; */
+
 }
 
-.Document_Upload h3{
-  color: grey;
+.document-upload-title {
+  width: 100%;
+  background-color: #FAFAFA;
+  color: black;
+  border-bottom: solid 2px rgb(202, 202, 202);
+  padding: 1.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.document-upload-content {
+  padding: 1rem 1.5rem;
+  font-size: 14px;
+}
+
+.upload {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+#upload-button {
+  background-color: #FF9900;
+  box-shadow: #b4b4b4 0px 1px 2px 1px;
+  padding: 0.5rem 2rem;
+  border-radius: 3px;
+}
+
+.document-upload-content h3 {
+  color: #545B64;
   font-size: 13px;
 }
 
+.file-label {
+  background-color: white;
+  color: #545B64;
+  cursor: pointer;
+  /* border-radius: 5px; */
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: black 0px 0px 2px 1px;
+  padding: 1rem 1.5rem;
+}
 
+.file-label:hover {
+  color: black;
+}
 
-.footer{
+.footer {
   font-size: 14px;
   padding: 1.5rem 0;
   background-color: #202C3A;
@@ -145,12 +238,12 @@ ul li{
   justify-content: space-between;
 }
 
-.footer div{
+.footer div {
   display: flex;
   flex-direction: row;
 }
 
-.footer div a{
+.footer div a {
   background-color: #202C3A;
   padding: 10px;
   margin-right: 15px;
