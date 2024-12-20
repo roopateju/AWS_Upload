@@ -1,26 +1,19 @@
-
 document.addEventListener('DOMContentLoaded', function () {
-    
     const proofItems = document.querySelectorAll('.valid-proof');
 
     proofItems.forEach(function (proof) {
         proof.addEventListener('click', function () {
-    
             proof.classList.toggle('open');
 
             const triangle = proof.querySelector('.triangle');
             if (proof.classList.contains('open')) {
-                
                 triangle.style.transform = 'rotate(90deg)';
             } else {
-            
                 triangle.style.transform = 'rotate(0deg)';
             }
         });
     });
 });
-
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -33,29 +26,36 @@ document.addEventListener("DOMContentLoaded", function () {
     fileInput.accept = ".png, .jpg, .jpeg, .pdf";
     fileInput.multiple = true;
 
-    
     document.querySelector(".file-label").addEventListener("click", function () {
         fileInput.click();
     });
 
     fileInput.addEventListener("change", function () {
         const files = fileInput.files;
-        if (files.length > 5) {
-            uploadStatus.textContent = "You can only upload up to 5 files.";
-            uploadStatus.style.color = "red";
-        } else {
-            uploadStatus.textContent = `You have selected ${files.length} file(s).`;
-            uploadStatus.style.color = "black";
+        const fileNames = [];
+
+        for (let i = 0; i < files.length; i++) {
+            fileNames.push(files[i].name);
         }
+
+        const fileNameMessage = `Your uploaded file is: "${fileNames.join(", ")}"`;
+        document.querySelector(".file-name").textContent = fileNameMessage;
     });
 
-    
     uploadForm.addEventListener("submit", function (event) {
-        event.preventDefault();
+        event.preventDefault(); 
 
         const files = fileInput.files;
+        const fileNames = [];
+
         if (files.length === 0) {
             uploadStatus.textContent = "Please select files to upload.";
+            uploadStatus.style.color = "red";
+            return;
+        }
+
+        if (files.length > 5) {
+            uploadStatus.textContent = "You can only upload up to 5 files.";
             uploadStatus.style.color = "red";
             return;
         }
@@ -82,12 +82,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (isValid) {
-            uploadStatus.textContent = "Uploading files...";
+            uploadStatus.textContent = `You have selected ${files.length} file(s). Uploading...`;
             uploadStatus.style.color = "green";
-            
+
             setTimeout(function () {
+            
                 uploadStatus.textContent = "Upload successful!";
                 uploadStatus.style.color = "green";
+
+                setTimeout(function () {
+                    document.querySelector(".file-name").textContent = "";
+                    fileInput.value = ""; 
+                    uploadStatus.textContent = ""; 
+                }, 3000);
             }, 3000);
         }
     });

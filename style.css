@@ -122,6 +122,7 @@ body {
   font-weight: bold;
 }
 
+/* Style for triangle icon rotation */
 .triangle {
   display: inline-block;
   transition: transform 0.3s ease;
@@ -131,6 +132,7 @@ body {
   transform: rotate(90deg);
 }
 
+/* Style for dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   margin-top: 10px;
@@ -156,9 +158,13 @@ body {
   padding-bottom: 5px;
 }
 
+/* When the dropdown is open, show the content */
 .valid-proof.open .dropdown-content {
   display: block;
 }
+
+
+
 
 @media (max-width: 900px) {
   .home {
@@ -209,20 +215,29 @@ body {
   border-radius: 3px;
 }
 
+#upload-button:hover{
+  background-color: #dd8808;
+  box-shadow: #FF9900;
+}
+
 .document-upload-content h3 {
   color: #545B64;
   font-size: 13px;
 }
 
+/* Styling for file-label (button for selecting files) */
 .file-label {
-  background-color: white;
+  display: inline-block;
+  background-color: #ffffff;
   color: #545B64;
-  cursor: pointer;
-  /* border-radius: 5px; */
+  border: 2px solid black;
+  /* Border with the same color as the upload button */
+  padding: 1rem 1.5rem;
   font-size: 15px;
   font-weight: bold;
-  box-shadow: black 0px 0px 2px 1px;
-  padding: 1rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .file-label:hover {
